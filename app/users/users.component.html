@@ -1,0 +1,25 @@
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td> {{u.id}} </td>
+            <td> <a routerLink="/todos/{{u.id}}"> {{u.name}} </a> </td>
+            <td> {{u.username}} </td>
+            <td> {{u.email}} </td>
+
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <p>Ukupan broj usera:{{users?.length}}</p>
+    </tfoot>
+</table>
